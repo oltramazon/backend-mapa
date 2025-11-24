@@ -19,6 +19,8 @@
     "@strapi/plugin-users-permissions": "5.31.2",
     "@strapi/strapi": "5.31.2",
     "better-sqlite3": "12.4.1",
+    "express": "^5.1.0",
+    "http-proxy-middleware": "^3.0.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",

@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rutas",
+  "info": {
+    "singularName": "ruta",
+    "pluralName": "rutas",
+    "displayName": "Ruta"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "descripcion": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "color": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "trazado": {
+      "type": "json",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "puntos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::punto.punto",
+      "mappedBy": "rutas"
+    },
+    "icono": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "punto": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::punto.punto",
+      "mappedBy": "ruta"
+    }
+  }
+}
